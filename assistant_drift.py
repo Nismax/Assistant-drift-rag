@@ -18,8 +18,8 @@ if query:
         loaders = [
             PyPDFLoader("Reglement-standard-Drift-2025.pdf"),
             PyPDFLoader("Reglement-Technique-Drift-2025.pdf"),
-            PyPDFLoader("equipement-securite.pdf),
-            PyPDFLoader("Annexe-J-FIA 2024.pdf),
+            PyPDFLoader("equipement-securite.pdf"),
+            PyPDFLoader("Annexe-J-FIA 2024.pdf"),
         ]
         docs = []
         for loader in loaders:
