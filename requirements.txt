@@ -1,7 +1,8 @@
-
 streamlit
 openai
-langchain
+langchain==0.1.17
+langchain-community==0.0.21
+langchain-core==0.1.52
+tiktoken
 pdfminer.six
 chromadb
-tiktoken
