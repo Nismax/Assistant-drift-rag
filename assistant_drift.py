@@ -3,7 +3,7 @@ import streamlit as st
 from langchain.chat_models import ChatOpenAI
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.document_loaders import PyPDFLoader
-from langchain.vectorstores import Chroma
+from langchain.vectorstores import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains import RetrievalQA
 import os
@@ -29,7 +29,7 @@ if query:
         split_docs = text_splitter.split_documents(docs)
 
         embeddings = OpenAIEmbeddings()
-        vectordb = Chroma.from_documents(split_docs, embedding=embeddings)
+        vectordb = FAISS.from_documents(split_docs, embedding=embeddings)
 
         retriever = vectordb.as_retriever()
         llm = ChatOpenAI(temperature=0, model="gpt-4")
