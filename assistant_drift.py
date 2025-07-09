@@ -16,8 +16,10 @@ query = st.text_input("Posez votre question réglementaire ici :")
 if query:
     with st.spinner("Recherche dans les règlements..."):
         loaders = [
-            PyPDFLoader("documents/Reglement-standard-Drift-2025.pdf"),
-            PyPDFLoader("documents/Reglement-Technique-Drift-2025.pdf")
+            PyPDFLoader("Reglement-standard-Drift-2025.pdf"),
+            PyPDFLoader("Reglement-Technique-Drift-2025.pdf"),
+            PyPDFLoader("equipement-securite.pdf),
+            PyPDFLoader("Annexe-J-FIA 2024.pdf),
         ]
         docs = []
         for loader in loaders:
